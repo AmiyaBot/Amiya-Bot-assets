@@ -1,0 +1,48 @@
+unpackFiles:
+  - files:
+      - 'data/arts/enemies/enemy_icons_hub.ab'
+    dest: 'resource/images/game/enemies'
+    temp:
+    rule: '^enemy_\d+_.*'
+
+  - files:
+      - 'data/arts/skills/skill_icons_hub.ab'
+    dest: 'resource/images/game/skills'
+    temp:
+    rule: '^skill_icon_.*'
+
+  - files:
+      - 'data/spritepack/ui_char_avatar_h1_0.ab'
+    dest: 'resource/images/game/avatars'
+    temp:
+    rule: '^char_\d+_.*'
+
+  - files:
+      - 'data/spritepack/character_portraits_0.ab'
+      - 'data/spritepack/character_portraits_linkages_0.ab'
+      - 'data/spritepack/character_portraits_roguelike_0.ab'
+      - 'data/spritepack/character_portraits_skins_0.ab'
+    dest: 'resource/images/game/portraits'
+    temp:
+    rule: '^char_\d+_.*'
+
+  - files:
+      - 'data/spritepack/ui_item_icons_h1_0.ab'
+      - 'data/spritepack/ui_item_icons_h1_acticon_0.ab'
+      - 'data/spritepack/ui_item_icons_h1_potential_0.ab'
+    dest: 'resource/images/game/items'
+    temp:
+    rule: '^(?!SpriteAtlasTexture)'
+
+unpackFolders:
+  - folders:
+      - 'data/charpack'
+    dest: 'resource/images/game/skins'
+    temp: 'temp/charpack'
+    rule: '^char_\d+_.*_\d+(\+)?(\[alpha])?$'
+
+  - folders:
+      - 'data/skinpack'
+    dest: 'resource/images/game/skins'
+    temp: 'temp/skinpack'
+    rule: '^char_\d+_.*#\d+b(\[alpha])?$'

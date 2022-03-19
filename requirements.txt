@@ -1,0 +1,6 @@
+requests~=2.27.1
+PyYAML~=5.4.1
+attrdict~=2.0.1
+opencv-python~=4.5.3.56
+Pillow~=8.3.2
+UnityPy~=1.7.13
