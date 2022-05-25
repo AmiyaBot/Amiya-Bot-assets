@@ -1,6 +1,7 @@
 /.idea/
 /venv/
 src/skins/skins/
+src/skins/skins/*.json
 
 .DS_Store
 *.pyc

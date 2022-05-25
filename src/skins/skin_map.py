@@ -7,7 +7,7 @@ if __name__ == '__main__':
 
     skin_map = {
         n.id: {
-            'name': char_name,
+            'name': n.wiki_name,
             'skins': n.skins()
         }
         for char_name, n in operators.items()

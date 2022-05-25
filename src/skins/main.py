@@ -69,6 +69,10 @@ if __name__ == '__main__':
         try:
             start()
             break
+        except KeyError:
+            cache = {}
+            time.sleep(5)
+            continue
         except Exception:
             print(traceback.format_exc())
             time.sleep(5)
