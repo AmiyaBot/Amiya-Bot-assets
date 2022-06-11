@@ -6,7 +6,9 @@ import urllib.parse
 
 from download import download_sync
 from requests_html import HTMLSession, HTML
+from fake_useragent import UserAgent
 
+ua = UserAgent()
 session = HTMLSession()
 cache = {}
 
@@ -14,7 +16,7 @@ cache = {}
 def get_char_wiki(name):
     print(f'requesting wiki for {name}...')
 
-    html: HTML = session.get(f'http://prts.wiki/w/{name}').html
+    html: HTML = session.get(f'http://prts.wiki/w/{name}', headers={'User-Agent': ua.random}).html
 
     stage_map = {}
 
@@ -71,9 +73,9 @@ if __name__ == '__main__':
             break
         except KeyError:
             cache = {}
-            time.sleep(5)
+            time.sleep(10)
             continue
-        except Exception:
-            print(traceback.format_exc())
-            time.sleep(5)
+        except Exception as e:
+            print(str(e), traceback.format_exc())
+            time.sleep(10)
             continue

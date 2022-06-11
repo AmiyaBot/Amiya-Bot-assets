@@ -4,3 +4,5 @@ attrdict~=2.0.1
 opencv-python~=4.5.3.56
 Pillow~=8.3.2
 UnityPy~=1.7.13
+fastapi~=0.78.0
+starlette~=0.19.1

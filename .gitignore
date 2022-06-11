@@ -5,3 +5,5 @@ src/skins/skins/*.json
 
 .DS_Store
 *.pyc
+
+skin_map.json
